@@ -9,12 +9,10 @@ class GrailsEpiceditorGrailsPlugin {
     def title = "Grails EpicEditor Plugin"
     def author = "Stefan Glase"
     def authorEmail = "stefan.glase@googlemail.com"
-    def description = '''\
-Small and simple plugin that adds the fabulous EpicEditor to your Grails project.
-'''
+    def description = '''Integrates the fabulous EpicEditor with your Grails project'''
 
     def documentation = "http://grails.org/plugin/grails-epiceditor"
-    // def license = "APACHE"
+    def license = "APACHE"
     // def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
     def issueManagement = [ system: "GitHub", url: "https://github.com/codescape/grails-epiceditor/issues" ]
     def scm = [ url: "https://github.com/codescape/grails-epiceditor" ]
