@@ -16,8 +16,8 @@ Small and simple plugin that adds the fabulous EpicEditor to your Grails project
     def documentation = "http://grails.org/plugin/grails-epiceditor"
     // def license = "APACHE"
     // def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
-    // def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
-    // def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def issueManagement = [ system: "GitHub", url: "https://github.com/codescape/grails-epiceditor/issues" ]
+    def scm = [ url: "https://github.com/codescape/grails-epiceditor" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before
