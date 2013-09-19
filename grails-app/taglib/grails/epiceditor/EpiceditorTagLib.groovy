@@ -4,6 +4,7 @@ class EpiceditorTagLib {
 
     static namespace = 'epiceditor'
 
+    // TODO add documentation for tag and possible and required parameters
     def display = { attrs, body ->
         def id = attrs.remove('id')
         def textareaId = "${id}-inner"
