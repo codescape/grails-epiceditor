@@ -1,13 +1,8 @@
 # mac osx
-
 .DS_Store
 
-
-
 # grails
-
 target/
-
 
 # intellij
 .idea/
