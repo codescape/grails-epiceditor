@@ -3,7 +3,8 @@ class GrailsEpiceditorGrailsPlugin {
     def version = "0.1"
     def grailsVersion = "2.2 > *"
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "grails-app/views/index.gsp",
+        "grails-app/views/layouts/main.gsp"
     ]
 
     def title = "Grails EpicEditor Plugin"
@@ -13,7 +14,10 @@ class GrailsEpiceditorGrailsPlugin {
 
     def documentation = "http://grails.org/plugin/grails-epiceditor"
     def license = "APACHE"
-    // def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
+    def developers = [
+            [ name: "Roland Schneider" ],
+            [ name: "Torsten Mandry" ]
+    ]
     def issueManagement = [ system: "GitHub", url: "https://github.com/codescape/grails-epiceditor/issues" ]
     def scm = [ url: "https://github.com/codescape/grails-epiceditor" ]
 
