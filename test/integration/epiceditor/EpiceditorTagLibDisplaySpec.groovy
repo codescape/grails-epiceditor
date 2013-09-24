@@ -2,25 +2,17 @@ package epiceditor
 
 import grails.plugin.spock.GroovyPagesSpec
 
-class EpiceditorTagLibSpec extends GroovyPagesSpec {
+class EpiceditorTagLibDisplaySpec extends GroovyPagesSpec {
 
-    void "display renders empty div"() {
+    void "renders an invisible textarea followed by an empty div"() {
         when:
         template = "<epiceditor:display/>"
 
         then:
-        output ==~ /.*<div.*\/>.*/
+        output ==~ /.*<textarea.*style="display: none;".*>.*<\/textarea>.*<div.*\/>.*/
     }
 
-    void "display renders invisible textarea"() {
-        when:
-        template = "<epiceditor:display/>"
-
-        then:
-        output ==~ /.*<textarea.*style="display: none;".*>.*<\/textarea>.*/
-    }
-
-    void "display with id renders div with id"() {
+    void "uses defined id for the empty div"() {
         when:
         template = """<epiceditor:display id="test"/>"""
 
@@ -28,7 +20,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         output ==~ /.*<div id="test".*/
     }
 
-    void "display with id attribute renders invisible textarea with id"() {
+    void "uses defined id with postfix '-textarea' for the invisible textarea"() {
         when:
         template = """<epiceditor:display id="test"/>"""
 
@@ -36,7 +28,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         output ==~ /.*<textarea.*id="test-textarea".*>.*/
     }
 
-    void "display without id attribute defaults to id 'epiceditor'"() {
+    void "uses 'epiceditor' as default id if none is defined"() {
         when:
         template = """<epiceditor:display />"""
 
@@ -45,7 +37,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         output ==~ /.*<textarea.*id="epiceditor-textarea".*>.*/
     }
 
-    void "display with content renders textarea containing content"() {
+    void "uses content as content of the invisible textarea"() {
         when:
         template = "<epiceditor:display>Abc content xyz.</epiceditor:display>"
 
