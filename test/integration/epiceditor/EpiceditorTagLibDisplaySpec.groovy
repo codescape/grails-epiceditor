@@ -4,12 +4,12 @@ import grails.plugin.spock.GroovyPagesSpec
 
 class EpiceditorTagLibDisplaySpec extends GroovyPagesSpec {
 
-    void "renders an invisible textarea followed by an empty div"() {
+    void "renders an empty div followed by an invisible textarea"() {
         when:
         template = "<epiceditor:display/>"
 
         then:
-        output ==~ /.*<textarea.*style="display: none;".*>.*<\/textarea>.*<div.*\/>.*/
+        output ==~ /.*<div.*\/>.*<textarea.*style="display: none;".*>.*<\/textarea>.*/
     }
 
     void "uses defined id for the empty div"() {

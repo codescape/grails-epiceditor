@@ -9,8 +9,8 @@ class EpiceditorTagLib {
         def id = attrs.remove('id') ?: "epiceditor"
         def textareaId = "${id}-textarea"
 
-        out << "<textarea id=\"$textareaId\" style=\"display: none;\">${body()}</textarea>"
         out << "<div id=\"$id\"/>"
+        out << "<textarea id=\"$textareaId\" style=\"display: none;\">${body()}</textarea>"
 
         out << r.script(null) {
             out << "var opts = { textarea: '$textareaId', container: '$id' };"
