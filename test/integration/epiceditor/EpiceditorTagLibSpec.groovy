@@ -9,7 +9,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         template = "<epiceditor:display/>"
 
         then:
-        output ==~ /.*<div.*><\/div>.*/
+        output ==~ /.*<div.*\/>.*/
     }
 
     void "display renders invisible textarea"() {
@@ -25,7 +25,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         template = """<epiceditor:display id="test"/>"""
 
         then:
-        output ==~ /.*<div id="test">.*/
+        output ==~ /.*<div id="test".*/
     }
 
     void "display with id attribute renders invisible textarea with inner-id"() {
@@ -41,7 +41,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         template = """<epiceditor:display />"""
 
         then:
-        output ==~ /.*<div id="epiceditor">.*/
+        output ==~ /.*<div id="epiceditor".*/
         output ==~ /.*<textarea.*id="epiceditor-inner".*>.*/
     }
 

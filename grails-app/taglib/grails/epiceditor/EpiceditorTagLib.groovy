@@ -10,7 +10,7 @@ class EpiceditorTagLib {
         def textareaId = "${id}-inner"
 
         out << "<textarea id=\"$textareaId\" style=\"display: none;\">${body()}</textarea>"
-        out << "<div id=\"$id\"></div>"
+        out << "<div id=\"$id\"/>"
 
         out << r.script(null) {
             out << "var opts = { textarea: '$textareaId', container: '$id' };"
