@@ -45,4 +45,13 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         output ==~ /.*<textarea.*id="epiceditor-textarea".*>.*/
     }
 
+    void "display with content renders textarea containing content"() {
+        when:
+        template = "<epiceditor:display>Abc content xyz.</epiceditor:display>"
+
+        then:
+        output ==~ /.*<textarea.*>Abc content xyz.<\/textarea>.*/
+    }
+
+
 }
