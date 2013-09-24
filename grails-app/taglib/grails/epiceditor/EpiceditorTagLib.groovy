@@ -6,11 +6,11 @@ class EpiceditorTagLib {
 
     // TODO add documentation for tag and possible and required parameters
     def display = { attrs, body ->
-        def id = attrs.remove('id')
-        def textareaId = "${id}-inner"
+        def id = attrs.remove('id') ?: "epiceditor"
+        def textareaId = "${id}-textarea"
 
-        out << "<textarea id=\"$textareaId\" style=\"display: none\">${body()}</textarea>"
-        out << "<div id=\"$id\"></div>"
+        out << "<div id=\"$id\"/>"
+        out << "<textarea id=\"$textareaId\" style=\"display: none;\">${body()}</textarea>"
 
         out << r.script(null) {
             out << "var opts = { textarea: '$textareaId', container: '$id' };"
