@@ -28,12 +28,12 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
         output ==~ /.*<div id="test".*/
     }
 
-    void "display with id attribute renders invisible textarea with inner-id"() {
+    void "display with id attribute renders invisible textarea with id"() {
         when:
         template = """<epiceditor:display id="test"/>"""
 
         then:
-        output ==~ /.*<textarea.*id="test-inner".*>.*/
+        output ==~ /.*<textarea.*id="test-textarea".*>.*/
     }
 
     void "display without id attribute defaults to id 'epiceditor'"() {
@@ -42,7 +42,7 @@ class EpiceditorTagLibSpec extends GroovyPagesSpec {
 
         then:
         output ==~ /.*<div id="epiceditor".*/
-        output ==~ /.*<textarea.*id="epiceditor-inner".*>.*/
+        output ==~ /.*<textarea.*id="epiceditor-textarea".*>.*/
     }
 
 }
